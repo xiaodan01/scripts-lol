@@ -5,3 +5,6 @@ var cookieReg = /^.*?\bwq_skey=([a-fA-F0-9]+).*$/;
 var cookie = $request.headers.Cookie;
 //获取匹配结果
 var wqskey = cookie.match(cookieReg)[1];
+//通知
+$notify("获取到了wqskey", "", wqskey);
+   $done();
