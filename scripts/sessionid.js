@@ -15,11 +15,11 @@ var cookie = $request.headers.Cookie;
 var sessionid = cookie.match(cookieReg)[1];
 var url = $request.url;
 //获取Token
-var x-Tt-Token = $request.header.x-Tt-Token;
+var x-Tt-Token = $request.header.['x-Tt-Token'];
 //获取Khronos
-var X-Khronos = $request.header.x-Khronos;
+var X-Khronos = $request.header.['x-Khronos'];
 //获取Gorgon
-var X-Gorgon = $request.header.x-Gorgon;
+var X-Gorgon = $request.header.['x-Gorgon'];
 //组合结果
 var ck = "["+url+"#"+sessionid+"#"+x-Tt-Token+"#"+X-Khronos+"#"+X-Gorgon+"]";
 
